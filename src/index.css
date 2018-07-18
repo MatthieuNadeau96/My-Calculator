@@ -1,5 +1,120 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  height: 100vh;
+  font-family: 'Open Sans Condensed', sans-serif;
+  background: hsl(0, 0%, 99%);
+}
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  transition: 0ms ease-out;
+  font-family: inherit;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper {
+  width: 320px;
+  height: 520px;
+  margin: auto;
+  position: relative;
+}
+
+.calculator {
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 60px -20px #aaa;
+}
+
+.calculator-display {
+  text-align: right;
+  font-size: 6em;
+  line-height: 120px;
+  background-color: white;
+  padding: 0px 30px;
+  flex: 1;
+}
+
+.calculator-keypad {
+  height: 400px;
+  display: flex;
+}
+
+.calculator .input-keys {
+  width: 240px;
+  background: white;
+}
+
+.calculator .function-keys {
+  display: flex;
+}
+
+.calculator .digit-keys {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+
+.calculator-key {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  line-height: 80px;
+  border-radius: 2px;
+}
+
+.calculator .function-keys .calculator-key  {
+  font-size: 2em;
+}
+
+.calculator .operation-keys .calculator-key {
+  font-size: 2em;
+}
+
+.calculator .digit-keys .calculator-key {
+  font-size: 2.2em;
+  line-height: 50px;
+}
+
+.calculator .digit-keys .key-0 {
+  width: 160px;
+}
+
+.calculator .digit-keys .calculator-key:active {
+  background-color: hsl(100, 0%, 97%);
+}
+
+.calculator .function-keys {
+  background-color: hsl(227, 28%, 92%);
+}
+
+.calculator .function-keys .calculator-key:active {
+  background-color: hsl(227, 28%, 86%);
+  color: #fff;
+}
+
+.calculator .operation-keys {
+  /* background-color: hsl(12, 81%, 87%); */
+  background-color: hsl(20, 81%, 94%);
+}
+
+.calculator .operation-keys .calculator-key:active {
+  background-color: hsl(20, 81%, 90%);
+  color: #fff;
 }
