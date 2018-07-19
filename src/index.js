@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+import ScaleText from 'react-scale-text';
+
+
 class Calculator extends React.Component {
   state = {
     value: null,
@@ -10,6 +13,8 @@ class Calculator extends React.Component {
     waitingForOperand: false,
     operand: null
   }
+
+  // TODO: Add commas for larger numbers
 
   inputDigit (digit) {
     const { displayValue, waitingForOperand } = this.state
@@ -105,7 +110,9 @@ class Calculator extends React.Component {
 
     return (
       <div className="calculator">
-        <div className="calculator-display">{displayValue}</div>
+        <div className="calculator-display">
+          <ScaleText>{displayValue}</ScaleText>
+        </div>
         <div className="calculator-keypad">
           <div className="input-keys">
             <div className="function-keys">
