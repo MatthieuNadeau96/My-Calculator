@@ -4,6 +4,7 @@ body {
   height: 100vh;
   font-family: 'Open Sans Condensed', sans-serif;
   background: hsl(0, 0%, 99%);
+  /* background: gray; */
   color: #777;
 }
 
@@ -14,7 +15,7 @@ button {
   padding: 0;
   cursor: pointer;
   outline: none;
-  transition: 0ms ease-out;
+  transition: 100ms ease-out;
   font-family: inherit;
   color: #777;
 }
@@ -98,13 +99,18 @@ button {
   width: 160px;
 }
 
+.calculator .operation-keys .key-subtract {
+  line-height: 0;
+  padding-bottom: 25px;
+}
+
 .calculator .digit-keys .calculator-key:active {
   background-color: hsl(100, 0%, 97%);
   /* color: #333; */
 }
 
 .calculator .function-keys {
-  background-color: hsl(227, 28%, 92%);
+  background-color: hsl(227, 28%, 94%);
 }
 
 .calculator .function-keys .calculator-key:active {
@@ -114,10 +120,10 @@ button {
 
 .calculator .operation-keys {
   /* background-color: hsl(12, 81%, 87%); */
-  background-color: hsl(20, 81%, 94%);
+  background-color: hsl(20, 81%, 97%);
 }
 
 .calculator .operation-keys .calculator-key:active {
-  background-color: hsl(20, 81%, 90%);
+  background-color: hsl(20, 78%, 90%);
   color: #fff;
 }
