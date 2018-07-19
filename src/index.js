@@ -45,8 +45,7 @@ class Calculator extends React.Component {
 
   clearDisplay () {
     this.setState({
-      displayValue: "0",
-      waitingForOperand: false
+      displayValue: "0"
     })
   }
 
@@ -69,6 +68,8 @@ class Calculator extends React.Component {
   performOperation (operator) {
     const { displayValue, operand, value } = this.state
 
+    const nextValue = parseFloat(displayValue)
+
     const operations = {
       '/': (prevValue, nextValue) => prevValue / nextValue,
       '*': (prevValue, nextValue) => prevValue * nextValue,
@@ -77,8 +78,6 @@ class Calculator extends React.Component {
       '=': (prevValue, nextValue) => nextValue
     }
 
-    // const prevValue =
-    const nextValue = parseFloat(displayValue)
 
     if (value == null) {
       this.setState({
