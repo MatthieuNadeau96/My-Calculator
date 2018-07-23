@@ -6,6 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 import ScaleText from 'react-scale-text';
 import NumberFormat from 'react-number-format';
 
+// TODO: Add Mobile Responsiveness
+
 class Calculator extends React.Component {
   state = {
     value: null,
