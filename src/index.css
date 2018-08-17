@@ -60,6 +60,7 @@ button {
 .calculator .input-keys {
   width: 240px;
   background: white;
+  width: 100%;
 }
 
 .calculator .function-keys {
@@ -84,6 +85,7 @@ button {
 
 .calculator .function-keys .calculator-key  {
   font-size: 2em;
+  width: 50%;
 }
 
 .calculator .operation-keys .calculator-key {
@@ -93,10 +95,12 @@ button {
 .calculator .digit-keys .calculator-key {
   font-size: 2.2em;
   line-height: 50px;
+  /* background: lightgrey; */
+  width: 33.33%;
 }
 
 .calculator .digit-keys .key-0 {
-  width: 160px;
+  width: 66.66%;
 }
 
 .calculator .operation-keys .key-subtract {
@@ -121,9 +125,21 @@ button {
 .calculator .operation-keys {
   /* background-color: hsl(12, 81%, 87%); */
   background-color: hsl(20, 81%, 97%);
+  width: 20%;
+}
+
+.calculator .key-divide, .key-mulitply, .key-subtract, .key-add, .key-equals {
+  width: 100%;
 }
 
 .calculator .operation-keys .calculator-key:active {
   background-color: hsl(20, 78%, 90%);
   color: #fff;
+}
+
+@media (max-width: 800px ) {
+  #wrapper {
+    width: 100%;
+  }
+
 }
